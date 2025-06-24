@@ -1,0 +1,43 @@
+import numpy as np 
+import matplotlib.pyplot as plt
+
+# 경계선 픽셀 목록
+contours = {
+'경계선1': [(1,2),(2,1),(3,1),(4,1),(5,1),(6,2),(5,4)],
+'경계선2': [(1,6),(1,7),(1,8),(2,9),(3,8),(4,7),(5,7)],
+'경계선3': [(4,12),(3,13),(4,14),(5,14),(6,13),(6,12)]
+}
+colors ={
+'경계선1':'red',
+'경계선2':'lime',
+'경계선3': 'bLue'
+}
+# 이미지 크기
+height, width = 8, 16
+img = np.zeros ((height, width), dtype=np.uint8)
+# 픽셀 설정
+for chain in contours.values():
+    for y, x in chain:
+        img[y, x] = 255
+# 시각화
+plt.figure(figsize=(12, 6)) 
+plt.imshow(img, cmap= 'gray')
+plt.title("8-connected Edge Directions")
+plt.xticks(np.arange(0, width, 1))
+plt.yticks(np.arange(0, height, 1))
+plt.grid(True)
+# 방향 화살표 및 텍스트
+for name, chain in contours.items():
+    color = colors[name]
+    for i in range(len(chain) - 1):
+        y0, x0 = chain[i]
+        y1, x1 = chain[i+1]
+        dx = x1 -x0
+        dy = y1 - y0
+        plt.arrow(x0, y0, dx*0.8, dy*0.8, head_width=0.3, head_length=0.3, fc=color, ec=color)
+    for y, x in chain:
+        plt.text(x, y, f"{x},{y}", color=color, fontsize=7, ha='center', va= 'center')
+plt.gca().invert_yaxis()
+plt.tight_layout()
+plt.savefig("direction_visualization.png") # 이미지 저장
+plt.show()
