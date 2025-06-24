@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맛집 미니게임</title>
+    <link href="mainCss.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <img class="logo_image" src="../media/그림1.png">
+        <div class="menu-container">
+        <button id="menuToggle">알아보기</button>
+        <ul id="menuList" class="hidden">
+            <li><a href="mainWeb.html" style="color: #453F4D;">홈</a></li>
+            <li><a href="p1.html" style="color: #453F4D;">순천 관광지</a></li>
+            <li><a href="p2.html" style="color: #453F4D;">맛집 미니게임</a></li>
+        </ul>
+        </div>
+
+        
+  <div class="wrapper"> 
+   <ul class="cards"> 
+        <!--카드들-->
+    <li class="card"> 
+
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_1.png" alt="card-img"> 
+     </div> </li> 
+
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_2.png" alt="card-img"> 
+     </div> </li> 
+     
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_3.png" alt="card-img"> 
+     </div> </li> 
+
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_4.png" alt="card-img"> 
+     </div> </li>
+
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_5.png" alt="card-img"> 
+     </div> </li> 
+
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_6.png" alt="card-img"> 
+     </div> </li> 
+
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_7.png" alt="card-img"> 
+     </div> </li>
+     
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_8.png" alt="card-img"> 
+     </div> </li> 
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_1.png" alt="card-img"> 
+     </div> </li> 
+
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_2.png" alt="card-img"> 
+     </div> </li> 
+     
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_3.png" alt="card-img"> 
+     </div> </li> 
+
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_4.png" alt="card-img"> 
+     </div> </li>
+
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_5.png" alt="card-img"> 
+     </div> </li> 
+
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_6.png" alt="card-img"> 
+     </div> </li> 
+
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_7.png" alt="card-img"> 
+     </div> </li>
+     
+    <li class="card"> 
+     <div class="view front-view"> 
+      <img src="../media/que_icon.svg" alt="icon"> 
+     </div> 
+     <div class="view back-view"> 
+      <img src="../media/img_8.png" alt="card-img"> 
+     </div> </li> 
+
+
+   </ul> 
+  </div> 
+  <!-- 게임 실패 오버레이 -->
+  <div id="gameOverOverlay" class="game-overlay hidden">
+    <img src="../media/Defeat.png" alt="Game Over">
+    <button onclick="restartGame()">다시하기</button>
+  </div>
+
+<!-- 게임 승리 오버레이 -->
+  <div id="gameWinOverlay" class="game-overlay hidden">
+    <img src="../media/Victory.png" alt="You Win!">
+    <button onclick="restartGame()">다시하기</button>
+  </div>
+    <script src="p2java.js"></script>
+</body>
+</html>
+

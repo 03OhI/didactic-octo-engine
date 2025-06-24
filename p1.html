@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관광홍보 홈페이지</title>
+<!--CSS는 하나로 설정함(폰트나 메뉴에 대한 내용이 곂치므로로)-->
+    <link href="mainCss.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div>
+        <img class="logo_image" src="../media/그림1.png">
+        <div class="menu-container">
+        <button id="menuToggle">알아보기</button>
+        <ul id="menuList" class="hidden">
+            <li><a href="mainWeb.html" style="color: #453F4D;">홈</a></li>
+            <li><a href="p1.html" style="color: #453F4D;">순천 관광지</a></li>
+            <li><a href="p2.html" style="color: #453F4D;">맛집 미니게임</a></li>
+        </ul>
+        </div>
+    </div>
+        <!--색깔 버튼을 클릭하면 사진과 내용, 표가 변경되도록 색깔 버튼을 생성함-->
+    <div>
+        <button id="sun" class="introduceBtn"></button>
+        <button id="garden" class="introduceBtn"></button>
+        <button id="nagan" class="introduceBtn"></button>
+        <button id="drama" class="introduceBtn"></button>
+        <p id="colorComment">색깔 버튼을 클릭하세요</p>
+    </div>
+        <!--여기에 사진과 글, 표를 추가할 것-->
+    <div class="contentBox">
+    <img class="showImg" id="mainImage" src="../media/sunshenman1.jpg">
+    <div class="textGroup">
+        <p></p>
+        
+
+    </div>
+
+
+    <script src="p1java.js"></script>
+</body>
+</html>
